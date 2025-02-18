@@ -6,4 +6,14 @@ COPY pom.xml /app
 
 WORKDIR /app
 
-RUN
+RUN mvn clean install
+
+FROM openjdk:8-jre-alpine
+
+COPY --from=build /app/target/JavaProject-0.0.1-SNAPSHOT.jar /app/app.jar
+
+WORKDIR /app
+
+EXPOSE 8000
+
+CMD [ "java", "-jar", "app.jar" ]
