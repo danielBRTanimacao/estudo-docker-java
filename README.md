@@ -33,4 +33,14 @@ Uma imagem Docker é um modelo imutável usado para criar contêineres Docker. E
 
 -   FROM `openjdk:21-jdk-slim`
 
-Por que usar...
+Depois que o código está compilado, não precisamos mais do `Maven`. Só precisamos de um ambiente `Java` para rodar o `JAR`.
+
+`Slim` = versão mais leve: A versão slim remove ferramentas desnecessárias (como compiladores e pacotes extras), tornando a imagem menor e mais rápida.
+
+Baseada no `OpenJDK 21`: Garante que seu JAR seja executado na mesma versão de Java que foi usado na compilação.
+
+Copiamos o JAR gerado na fase de build `(/app/target/JavaProject-0.0.1-SNAPSHOT.jar) `para dentro do contêiner.
+
+```
+CMD ["java", "-jar", "app.jar"]
+```
