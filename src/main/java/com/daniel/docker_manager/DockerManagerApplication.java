@@ -1,13 +1,14 @@
-package com.DockerProject.JavaProject;
+package com.daniel.docker_manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavaProjectApplication {
+public class DockerManagerApplication {
+
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavaProjectApplication.class, args);
+		SpringApplication.run(DockerManagerApplication.class, args);
 	}
 
 }

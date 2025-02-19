@@ -1,6 +1,10 @@
+# Desafio Gerente de containers DOCKER🐋
+
+> Projeto principal
+
 # Estudando DOCKER + SQL + JAVA ☕
 
-> Um simples "Olá, mundo!" em spring para deploy e instalação dos pacotes necessarios em java... Esté estudo esta sendo feito com base em pesquisas no ChatGPt além de tutoriais e documentações.
+> Primeiro projeto simples "Olá, mundo!" em spring para deploy e instalação dos pacotes necessarios em java... Esté estudo esta sendo feito com base em pesquisas no ChatGPt além de tutoriais e documentações.
 
 <a href="https://www.youtube.com/@GrandeFiasco">Canal do Fiasco</a> |
 <a href="https://www.youtube.com/@kipperdev">Canal da Fernanda Kipper</a>

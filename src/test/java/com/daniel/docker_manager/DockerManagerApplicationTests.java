@@ -1,10 +1,10 @@
-package com.DockerProject.JavaProject;
+package com.daniel.docker_manager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaProjectApplicationTests {
+class DockerManagerApplicationTests {
 
 	@Test
 	void contextLoads() {
