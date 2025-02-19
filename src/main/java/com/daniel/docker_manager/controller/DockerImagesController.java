@@ -11,7 +11,7 @@ import com.daniel.docker_manager.service.DockerService;
 import com.github.dockerjava.api.model.Image;
 
 @RestController
-@RequestMapping("api/images")
+@RequestMapping("/api/images")
 public class DockerImagesController {
     private final DockerService dockerService;
 

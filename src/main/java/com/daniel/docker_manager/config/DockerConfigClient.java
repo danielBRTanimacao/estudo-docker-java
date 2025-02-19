@@ -17,12 +17,18 @@ public class DockerConfigClient {
     @Bean
     public DockerClient buildDockerClient() {
         DefaultDockerClientConfig.Builder dockerClientConfigBuilder = DefaultDockerClientConfig.createDefaultConfigBuilder();
+    
         if (this.dockerSocketPath != null && this.dockerSocketPath.startsWith("unix://")) {
             dockerClientConfigBuilder.withDockerHost(dockerSocketPath).withDockerTlsVerify(false);
         }
-
+    
         DefaultDockerClientConfig dockerConfigClient = dockerClientConfigBuilder.build();
-        ApacheDockerHttpClient dockerHttpClient = new ApacheDockerHttpClient.Builder().dockerHost(dockerConfigClient.getDockerHost()).build();
-        return DockerClientBuilder.getInstance().withDockerHttpClient(dockerHttpClient).build();
+    
+        ApacheDockerHttpClient dockerHttpClient = new ApacheDockerHttpClient.Builder().dockerHost(dockerConfigClient.getDockerHost())
+                .build();
+    
+        return DockerClientBuilder.getInstance(dockerConfigClient).withDockerHttpClient(dockerHttpClient)
+                .build();
     }
+    
 }

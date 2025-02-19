@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.daniel.docker_manager.service.DockerService;
 
-
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 @RestController
-@RequestMapping("api/container")
+@RequestMapping("/api/containers")
 public class DockerContainerController {
     private final DockerService dockerService;
 
@@ -25,7 +24,7 @@ public class DockerContainerController {
     }
 
     @GetMapping("")
-    public List<com.github.dockerjava.api.model.Container> listContainers(@RequestParam(required = false)  boolean all) {
+    public List<com.github.dockerjava.api.model.Container> listContainers(@RequestParam(required = false) boolean all) {
         return dockerService.listContainers(all);
     }
 
