@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.github.dockerjava.core.RemoteApiVersion;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
 import com.github.dockerjava.core.DockerClientBuilder;
@@ -19,7 +20,7 @@ public class DockerConfigClient {
         DefaultDockerClientConfig.Builder dockerClientConfigBuilder = DefaultDockerClientConfig.createDefaultConfigBuilder();
     
         if (this.dockerSocketPath != null && this.dockerSocketPath.startsWith("unix://")) {
-            dockerClientConfigBuilder.withDockerHost(dockerSocketPath).withDockerTlsVerify(false);
+            dockerClientConfigBuilder.withDockerHost(dockerSocketPath).withApiVersion(RemoteApiVersion.VERSION_1_24).withDockerTlsVerify(false);
         }
     
         DefaultDockerClientConfig dockerConfigClient = dockerClientConfigBuilder.build();
