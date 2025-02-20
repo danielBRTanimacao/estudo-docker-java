@@ -1,12 +1,11 @@
 import Header from "./components/Header";
+import Dashboard from "./components/Dashboard";
 
 export default () => {
     return (
         <>
             <Header />
-            <div>
-                <h1>Criando o front end da aplicação</h1>
-            </div>
+            <Dashboard />
         </>
     );
 };
