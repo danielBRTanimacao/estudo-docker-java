@@ -6,6 +6,7 @@ services:
             - "8080:8080"
         environment:
             - SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb
+            - DOCKER_HOST=tcp://host.docker.internal:2375
         networks:
             - app_network
 
