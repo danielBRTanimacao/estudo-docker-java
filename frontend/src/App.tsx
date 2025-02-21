@@ -7,8 +7,8 @@ export default () => {
             <Header />
             <Dashboard
                 endpoints={[
-                    "http://127.0.0.1:8080/api/containers",
-                    "http://127.0.0.1:8080/api/images"
+                    import.meta.env.VITE_API_CONTAINERS,
+                    import.meta.env.VITE_API_IMAGES
                 ]}
             />
         </>

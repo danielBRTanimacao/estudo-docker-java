@@ -36,8 +36,6 @@ export default ({ endpoints }: Props) => {
 
     return (
         <main>
-            <div className="text-center">Parte principal do Dashboard</div>
-
             {loading && <p>Carregando...</p>}
             {error && <p style={{ color: "red" }}>Ocorreu um erro: {error}</p>}
 
