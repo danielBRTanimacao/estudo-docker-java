@@ -4,6 +4,16 @@
 
 ### Como clonar projeto
 
+```
+git clone https://github.com/danielBRTanimacao/estudo-docker-java.git
+
+install dependencies on pom.xml
+
+cd frontend
+npm i
+npm run dev
+```
+
 ### Canais que utilizei para estudar 🐋
 
 -   <a href="https://www.youtube.com/@kipperdev">Canal da Fernanda Kipper</a>
