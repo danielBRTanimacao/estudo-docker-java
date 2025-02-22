@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.shadow-text:hover {
+    text-shadow: white 0.2px 0 0.8em;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    cursor: pointer;
+}
