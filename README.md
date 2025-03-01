@@ -16,6 +16,11 @@ npm i
 npm run dev
 ```
 
+### 🟢 Como rodar projeto localmente?
+Apos clonar a aplicação e baixar as dependencias `pom.xml` basta apenas rodar a raiz do projeto Spring no `src/main/java/com/daniel/docker_manager/DockerManagerApplication.java`.
+
+Em um outro terminal você vai rodar o front end `cd ./frontend` utilize o comando `npm run dev` rode sua aplicação no navegador.
+
 ### Canais que utilizei para estudar 🐋
 
 -   <a href="https://www.youtube.com/@kipperdev">Canal da Fernanda Kipper</a>
